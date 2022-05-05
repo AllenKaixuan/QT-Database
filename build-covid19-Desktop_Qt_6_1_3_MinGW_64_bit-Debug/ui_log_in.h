@@ -10,6 +10,7 @@
 #define UI_LOG_IN_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
@@ -45,6 +46,9 @@ public:
         log_in->resize(400, 250);
         log_in->setMinimumSize(QSize(400, 250));
         log_in->setMaximumSize(QSize(400, 250));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/icon/icon.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        log_in->setWindowIcon(icon);
         gridLayout_2 = new QGridLayout(log_in);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         widget_2 = new QWidget(log_in);
@@ -111,7 +115,7 @@ public:
         widget_3->setObjectName(QString::fromUtf8("widget_3"));
         label_3 = new QLabel(widget_3);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(100, 20, 161, 31));
+        label_3->setGeometry(QRect(80, 20, 211, 31));
         QFont font1;
         font1.setPointSize(15);
         font1.setBold(true);
@@ -128,14 +132,14 @@ public:
 
     void retranslateUi(QWidget *log_in)
     {
-        log_in->setWindowTitle(QCoreApplication::translate("log_in", "Form", nullptr));
+        log_in->setWindowTitle(QCoreApplication::translate("log_in", "Kaixi", nullptr));
         label_2->setText(QCoreApplication::translate("log_in", "\347\224\250\346\210\267\345\220\215", nullptr));
         name->setPlaceholderText(QCoreApplication::translate("log_in", "\350\257\267\350\276\223\345\205\245\347\224\250\346\210\267\345\220\215", nullptr));
         label->setText(QCoreApplication::translate("log_in", "\345\257\206\347\240\201", nullptr));
         password->setPlaceholderText(QCoreApplication::translate("log_in", "\350\257\267\350\276\223\345\205\245\345\257\206\347\240\201", nullptr));
         pushButton_2->setText(QCoreApplication::translate("log_in", "\347\231\273\345\275\225", nullptr));
         pushButton->setText(QCoreApplication::translate("log_in", "\351\200\200\345\207\272", nullptr));
-        label_3->setText(QCoreApplication::translate("log_in", "\346\240\270\351\205\270\347\256\241\347\220\206\347\263\273\347\273\237", nullptr));
+        label_3->setText(QCoreApplication::translate("log_in", "\346\240\270\351\205\270\344\277\241\346\201\257\347\256\241\347\220\206\347\263\273\347\273\237", nullptr));
     } // retranslateUi
 
 };

@@ -110,7 +110,9 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_res.cpp
 debug/qrc_res.cpp: ../covid19/res.qrc \
 		D:/Programe/QT/6.1.3/mingw81_64/bin/rcc.exe \
-		../icon/icon.jpg
+		../icon/user.jpg \
+		../icon/icon.jpg \
+		../icon/background1.jpg
 	D:\Programe\QT\6.1.3\mingw81_64\bin\rcc.exe -name res ..\covid19\res.qrc -o debug\qrc_res.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h
@@ -545,6 +547,8 @@ debug/log_in.o: ../covid19/log_in.cpp ../covid19/log_in.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/QTransform \
 		ui_log_in.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QVariant \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/QIcon \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/qicon.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets/QApplication \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets/qapplication.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcoreapplication.h \
@@ -571,7 +575,6 @@ debug/log_in.o: ../covid19/log_in.cpp ../covid19/log_in.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets/QPushButton \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets/qpushbutton.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets/qabstractbutton.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/qicon.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets/QSpacerItem
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\log_in.o ..\covid19\log_in.cpp
 
@@ -850,6 +853,7 @@ debug/mainwindow.o: ../covid19/mainwindow.cpp ../covid19/mainwindow.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets/QWidget \
 		ui_mainwindow.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QVariant \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/QIcon \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets/QApplication \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets/qapplication.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcoreapplication.h \

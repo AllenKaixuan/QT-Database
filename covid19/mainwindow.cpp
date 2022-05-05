@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     auto f =[&](){
         this->show();
     };
-    connect(&m_dlgLogin,&log_in::sendLoginSuccess,this,f);  //登录成功自动跳到主界面
+    connect(&m_dlgLogin,&log_in::sendLoginSuccess,this, f);  //登录成功自动跳到主界面
 }
 
 MainWindow::~MainWindow()
