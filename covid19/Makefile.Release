@@ -116,7 +116,6 @@ compiler_rcc_clean:
 	-$(DEL_FILE) release\qrc_res.cpp
 release/qrc_res.cpp: res.qrc \
 		D:/Programe/QT/6.1.3/mingw81_64/bin/rcc.exe \
-		../qss/obtuse_angel.qss \
 		../icon/user.jpg \
 		../icon/icon.jpg \
 		../icon/background1.jpg
@@ -399,10 +398,10 @@ release/moc_mainwindow.cpp: mainwindow.h \
 	D:\Programe\QT\6.1.3\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/lxk68/experiment/QT/laptop_pro16/covid19/release/moc_predefs.h -ID:/Programe/QT/6.1.3/mingw81_64/mkspecs/win32-g++ -IC:/Users/lxk68/experiment/QT/laptop_pro16/covid19 -ID:/Programe/QT/6.1.3/mingw81_64/include -ID:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets -ID:/Programe/QT/6.1.3/mingw81_64/include/QtGui -ID:/Programe/QT/6.1.3/mingw81_64/include/QtSql -ID:/Programe/QT/6.1.3/mingw81_64/include/QtCore -ID:/Programe/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Programe/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Programe/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Programe/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Programe/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Programe/QT/Tools/mingw810_64/x86_64-w64-mingw32/include mainwindow.h -o release\moc_mainwindow.cpp
 
 release/moc_stusql.cpp: stusql.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QObject \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobject.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobjectdefs.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qnamespace.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QDate \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qdatetime.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstring.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qchar.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qglobal.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qconfig-bootstrapped.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qconfig.h \
@@ -424,13 +423,11 @@ release/moc_stusql.cpp: stusql.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qmutex.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qnumeric.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qversiontagging.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qtmetamacros.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobjectdefs_impl.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstring.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qchar.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringview.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qbytearray.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qrefcount.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qnamespace.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qtmetamacros.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qarraydata.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qpair.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qarraydatapointer.h \
@@ -444,29 +441,50 @@ release/moc_stusql.cpp: stusql.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qutf8stringview.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringtokenizer.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringbuilder.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qlist.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qshareddata.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qhashfunctions.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcalendar.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qlocale.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qvariant.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qlist.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qiterator.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qbytearraylist.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringlist.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qalgorithms.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringmatcher.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcoreevent.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qscopedpointer.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qmetatype.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcompare.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qvarlengtharray.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qdatastream.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qscopedpointer.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qiodevicebase.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qiterable.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qmetacontainer.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcontainerinfo.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qtaggedpointer.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qmath.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobjectdefs.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qmap.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qshareddata_impl.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qhash.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobject.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcoreevent.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobject_impl.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qproperty.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qshareddata.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qpropertyprivate.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qdebug.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qtextstream.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringconverter.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qset.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcontiguouscache.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qsharedpointer.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QObject \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/QSqlDatabase \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qsqldatabase.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qtsqlglobal.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qtsql-config.h \
 		release/moc_predefs.h \
 		D:/Programe/QT/6.1.3/mingw81_64/bin/moc.exe
 	D:\Programe\QT\6.1.3\mingw81_64\bin\moc.exe $(DEFINES) --include C:/Users/lxk68/experiment/QT/laptop_pro16/covid19/release/moc_predefs.h -ID:/Programe/QT/6.1.3/mingw81_64/mkspecs/win32-g++ -IC:/Users/lxk68/experiment/QT/laptop_pro16/covid19 -ID:/Programe/QT/6.1.3/mingw81_64/include -ID:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets -ID:/Programe/QT/6.1.3/mingw81_64/include/QtGui -ID:/Programe/QT/6.1.3/mingw81_64/include/QtSql -ID:/Programe/QT/6.1.3/mingw81_64/include/QtCore -ID:/Programe/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -ID:/Programe/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -ID:/Programe/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -ID:/Programe/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -ID:/Programe/QT/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -ID:/Programe/QT/Tools/mingw810_64/x86_64-w64-mingw32/include stusql.h -o release\moc_stusql.cpp
@@ -797,7 +815,14 @@ release/main.o: main.cpp mainwindow.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/qguiapplication.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/qinputmethod.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qlocale.h \
-		stusql.h
+		stusql.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QDate \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qdatetime.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcalendar.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/QSqlDatabase \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qsqldatabase.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qtsqlglobal.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qtsql-config.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o main.cpp
 
 release/mainwindow.o: mainwindow.cpp mainwindow.h \
@@ -998,10 +1023,10 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o mainwindow.cpp
 
 release/stusql.o: stusql.cpp stusql.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QObject \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobject.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobjectdefs.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qnamespace.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QDate \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qdatetime.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstring.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qchar.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qglobal.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qconfig-bootstrapped.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qconfig.h \
@@ -1023,13 +1048,11 @@ release/stusql.o: stusql.cpp stusql.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qmutex.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qnumeric.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qversiontagging.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qtmetamacros.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobjectdefs_impl.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstring.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qchar.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringview.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qbytearray.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qrefcount.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qnamespace.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qtmetamacros.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qarraydata.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qpair.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qarraydatapointer.h \
@@ -1043,29 +1066,53 @@ release/stusql.o: stusql.cpp stusql.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qutf8stringview.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringtokenizer.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringbuilder.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qlist.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qshareddata.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qhashfunctions.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcalendar.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qlocale.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qvariant.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qlist.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qiterator.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qbytearraylist.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringlist.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qalgorithms.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringmatcher.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcoreevent.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qscopedpointer.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qmetatype.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcompare.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qvarlengtharray.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qdatastream.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qscopedpointer.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qiodevicebase.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qiterable.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qmetacontainer.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcontainerinfo.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qtaggedpointer.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qmath.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobjectdefs.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobjectdefs_impl.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qmap.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qshareddata_impl.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qhash.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobject.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcoreevent.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qobject_impl.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qproperty.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qshareddata.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qpropertyprivate.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qdebug.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qtextstream.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringconverter.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qset.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcontiguouscache.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qsharedpointer.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qsharedpointer_impl.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QObject \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/QSqlDatabase \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qsqldatabase.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qtsqlglobal.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qtsql-config.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QCoreApplication \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcoreapplication.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qeventloop.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets/QMessageBox \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets/qmessagebox.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -1093,8 +1140,6 @@ release/stusql.o: stusql.cpp stusql.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/qregion.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qline.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/qpixmap.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qsharedpointer.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qsharedpointer_impl.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/qfont.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/qfontmetrics.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/qfontinfo.h \
@@ -1106,15 +1151,6 @@ release/stusql.o: stusql.cpp stusql.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qiodevice.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qpointer.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qurl.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qvariant.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qmap.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qshareddata_impl.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qhash.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qdebug.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qtextstream.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qstringconverter.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qset.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/qcontiguouscache.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/qeventpoint.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/qvector2d.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/qvectornd.h \
@@ -1126,10 +1162,9 @@ release/stusql.o: stusql.cpp stusql.h \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QSize \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QSizeF \
 		D:/Programe/QT/6.1.3/mingw81_64/include/QtGui/QTransform \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/QSqlDatabase \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qsqldatabase.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qtsqlglobal.h \
-		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qtsql-config.h
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/QSqlQuery \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtSql/qsqlquery.h \
+		D:/Programe/QT/6.1.3/mingw81_64/include/QtCore/QtDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\stusql.o stusql.cpp
 
 release/qrc_res.o: release/qrc_res.cpp 

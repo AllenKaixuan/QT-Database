@@ -3,6 +3,5 @@
         <file>../icon/icon.jpg</file>
         <file>../icon/user.jpg</file>
         <file>../icon/background1.jpg</file>
-        <file>../qss/obtuse_angel.qss</file>
     </qresource>
 </RCC>
