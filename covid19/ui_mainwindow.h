@@ -88,6 +88,9 @@ public:
         gridLayout_3->addWidget(pushButton, 3, 2, 1, 1);
 
         treeWidget = new QTreeWidget(centralwidget);
+        QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
+        __qtreewidgetitem->setText(0, QString::fromUtf8("1"));
+        treeWidget->setHeaderItem(__qtreewidgetitem);
         treeWidget->setObjectName(QString::fromUtf8("treeWidget"));
         treeWidget->setMinimumSize(QSize(0, 0));
         treeWidget->setMaximumSize(QSize(160, 600));
@@ -154,6 +157,7 @@ public:
 
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
+        stackedWidget->setMinimumSize(QSize(0, 0));
         stackedWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(52, 132, 152);"));
         page = new QWidget();
         page->setObjectName(QString::fromUtf8("page"));
@@ -246,7 +250,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 804, 21));
+        menubar->setGeometry(QRect(0, 0, 804, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
