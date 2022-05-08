@@ -16,7 +16,6 @@
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -34,8 +33,9 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout_3;
-    QPushButton *pushButton;
+    QPushButton *btn_simulation;
     QTreeWidget *treeWidget;
+    QPushButton *pushButton;
     QWidget *widget;
     QGridLayout *gridLayout;
     QWidget *widget_2;
@@ -45,16 +45,16 @@ public:
     QSpacerItem *horizontalSpacer_2;
     QLabel *label;
     QSpacerItem *horizontalSpacer;
+    QLabel *lable_4;
+    QPushButton *btn_clear;
     QStackedWidget *stackedWidget;
     QWidget *page;
     QWidget *page_2;
     QGridLayout *gridLayout_4;
+    QSpacerItem *horizontalSpacer_3;
     QCheckBox *checkBox;
-    QLineEdit *lineEdit;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_5;
+    QPushButton *btn_del;
+    QPushButton *btn_add;
     QTableWidget *tableWidget;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -63,8 +63,8 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(804, 588);
-        MainWindow->setMinimumSize(QSize(150, 0));
+        MainWindow->resize(950, 588);
+        MainWindow->setMinimumSize(QSize(170, 0));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/icon/icon.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
@@ -81,11 +81,11 @@ public:
 ""));
         gridLayout_3 = new QGridLayout(centralwidget);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setMaximumSize(QSize(75, 16777215));
+        btn_simulation = new QPushButton(centralwidget);
+        btn_simulation->setObjectName(QString::fromUtf8("btn_simulation"));
+        btn_simulation->setMaximumSize(QSize(75, 16777215));
 
-        gridLayout_3->addWidget(pushButton, 3, 2, 1, 1);
+        gridLayout_3->addWidget(btn_simulation, 2, 2, 1, 1);
 
         treeWidget = new QTreeWidget(centralwidget);
         QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem();
@@ -102,7 +102,13 @@ public:
         treeWidget->setHeaderHidden(true);
         treeWidget->header()->setDefaultSectionSize(100);
 
-        gridLayout_3->addWidget(treeWidget, 2, 0, 1, 1);
+        gridLayout_3->addWidget(treeWidget, 1, 0, 1, 1);
+
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setMaximumSize(QSize(75, 16777215));
+
+        gridLayout_3->addWidget(pushButton, 2, 4, 1, 1);
 
         widget = new QWidget(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
@@ -153,7 +159,18 @@ public:
         gridLayout->addItem(horizontalSpacer, 1, 3, 1, 1);
 
 
-        gridLayout_3->addWidget(widget, 0, 0, 2, 2);
+        gridLayout_3->addWidget(widget, 0, 0, 1, 2);
+
+        lable_4 = new QLabel(centralwidget);
+        lable_4->setObjectName(QString::fromUtf8("lable_4"));
+
+        gridLayout_3->addWidget(lable_4, 2, 1, 1, 1);
+
+        btn_clear = new QPushButton(centralwidget);
+        btn_clear->setObjectName(QString::fromUtf8("btn_clear"));
+        btn_clear->setMaximumSize(QSize(75, 16777215));
+
+        gridLayout_3->addWidget(btn_clear, 2, 3, 1, 1);
 
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
@@ -166,64 +183,42 @@ public:
         page_2->setObjectName(QString::fromUtf8("page_2"));
         gridLayout_4 = new QGridLayout(page_2);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_4->addItem(horizontalSpacer_3, 0, 1, 1, 1);
+
         checkBox = new QCheckBox(page_2);
         checkBox->setObjectName(QString::fromUtf8("checkBox"));
 
         gridLayout_4->addWidget(checkBox, 0, 0, 1, 1);
 
-        lineEdit = new QLineEdit(page_2);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-
-        gridLayout_4->addWidget(lineEdit, 0, 1, 1, 1);
-
-        pushButton_4 = new QPushButton(page_2);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        btn_del = new QPushButton(page_2);
+        btn_del->setObjectName(QString::fromUtf8("btn_del"));
+        btn_del->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color:rgba(229,149,114,1);\n"
 "font: 700 9pt \"Microsoft YaHei UI\";\n"
 "color:rgb(255, 255, 255)\n"
 "}"));
 
-        gridLayout_4->addWidget(pushButton_4, 0, 2, 1, 1);
+        gridLayout_4->addWidget(btn_del, 0, 3, 1, 1);
 
-        pushButton_2 = new QPushButton(page_2);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        btn_add = new QPushButton(page_2);
+        btn_add->setObjectName(QString::fromUtf8("btn_add"));
+        btn_add->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color:rgba(229,149,114,1);\n"
 "font: 700 9pt \"Microsoft YaHei UI\";\n"
 "color:rgb(255, 255, 255)\n"
 "}"));
 
-        gridLayout_4->addWidget(pushButton_2, 0, 4, 1, 1);
-
-        pushButton_3 = new QPushButton(page_2);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-color:rgba(229,149,114,1);\n"
-"font: 700 9pt \"Microsoft YaHei UI\";\n"
-"color:rgb(255, 255, 255)\n"
-"}"));
-
-        gridLayout_4->addWidget(pushButton_3, 0, 3, 1, 1);
-
-        pushButton_5 = new QPushButton(page_2);
-        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-color:rgba(229,149,114,1);\n"
-"font: 700 9pt \"Microsoft YaHei UI\";\n"
-"color:rgb(255, 255, 255)\n"
-"}"));
-
-        gridLayout_4->addWidget(pushButton_5, 0, 5, 1, 1);
+        gridLayout_4->addWidget(btn_add, 0, 2, 1, 1);
 
         tableWidget = new QTableWidget(page_2);
-        if (tableWidget->columnCount() < 6)
-            tableWidget->setColumnCount(6);
+        if (tableWidget->columnCount() < 7)
+            tableWidget->setColumnCount(7);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QFont font2;
         font2.setBold(true);
-        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
-        __qtablewidgetitem->setFont(font2);
-        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
         __qtablewidgetitem1->setFont(font2);
         tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
@@ -239,18 +234,47 @@ public:
         QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
         __qtablewidgetitem5->setFont(font2);
         tableWidget->setHorizontalHeaderItem(5, __qtablewidgetitem5);
+        QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
+        __qtablewidgetitem6->setFont(font2);
+        tableWidget->setHorizontalHeaderItem(6, __qtablewidgetitem6);
+        if (tableWidget->rowCount() < 2)
+            tableWidget->setRowCount(2);
+        QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(0, __qtablewidgetitem7);
+        QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(1, __qtablewidgetitem8);
+        QTableWidgetItem *__qtablewidgetitem9 = new QTableWidgetItem();
+        tableWidget->setItem(0, 0, __qtablewidgetitem9);
+        QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
+        tableWidget->setItem(0, 1, __qtablewidgetitem10);
+        QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
+        tableWidget->setItem(0, 2, __qtablewidgetitem11);
+        QTableWidgetItem *__qtablewidgetitem12 = new QTableWidgetItem();
+        tableWidget->setItem(0, 3, __qtablewidgetitem12);
+        QTableWidgetItem *__qtablewidgetitem13 = new QTableWidgetItem();
+        tableWidget->setItem(0, 4, __qtablewidgetitem13);
+        QTableWidgetItem *__qtablewidgetitem14 = new QTableWidgetItem();
+        tableWidget->setItem(0, 5, __qtablewidgetitem14);
+        QTableWidgetItem *__qtablewidgetitem15 = new QTableWidgetItem();
+        tableWidget->setItem(0, 6, __qtablewidgetitem15);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
+        QFont font3;
+        font3.setPointSize(10);
+        font3.setBold(true);
+        tableWidget->setFont(font3);
+        tableWidget->horizontalHeader()->setStretchLastSection(true);
+        tableWidget->verticalHeader()->setVisible(false);
 
-        gridLayout_4->addWidget(tableWidget, 1, 0, 1, 6);
+        gridLayout_4->addWidget(tableWidget, 1, 0, 1, 4);
 
         stackedWidget->addWidget(page_2);
 
-        gridLayout_3->addWidget(stackedWidget, 2, 1, 1, 2);
+        gridLayout_3->addWidget(stackedWidget, 1, 1, 1, 4);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 804, 25));
+        menubar->setGeometry(QRect(0, 0, 950, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -267,27 +291,49 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Kaixi", nullptr));
+        btn_simulation->setText(QCoreApplication::translate("MainWindow", "\346\250\241\346\213\237\346\265\213\350\257\225", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "\351\200\200\345\207\272", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Kaixi", nullptr));
         label_3->setText(QString());
         label->setText(QCoreApplication::translate("MainWindow", "\346\240\270\351\205\270\344\277\241\346\201\257\347\256\241\347\220\206\347\263\273\347\273\237", nullptr));
+        lable_4->setText(QString());
+        btn_clear->setText(QCoreApplication::translate("MainWindow", "\346\270\205\347\251\272\345\210\227\350\241\250", nullptr));
         checkBox->setText(QCoreApplication::translate("MainWindow", "\345\205\250\351\200\211", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "\346\220\234\347\264\242", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "\344\277\256\346\224\271", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "\346\267\273\345\212\240", nullptr));
-        pushButton_5->setText(QCoreApplication::translate("MainWindow", "\345\210\240\351\231\244", nullptr));
+        btn_del->setText(QCoreApplication::translate("MainWindow", "\345\210\240\351\231\244", nullptr));
+        btn_add->setText(QCoreApplication::translate("MainWindow", "\346\267\273\345\212\240", nullptr));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QCoreApplication::translate("MainWindow", "\345\255\246\351\231\242", nullptr));
+        ___qtablewidgetitem->setText(QCoreApplication::translate("MainWindow", "\345\272\217\345\217\267", nullptr));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QCoreApplication::translate("MainWindow", "\345\255\246\345\217\267", nullptr));
+        ___qtablewidgetitem1->setText(QCoreApplication::translate("MainWindow", "\345\255\246\351\231\242", nullptr));
         QTableWidgetItem *___qtablewidgetitem2 = tableWidget->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QCoreApplication::translate("MainWindow", "\345\247\223\345\220\215", nullptr));
+        ___qtablewidgetitem2->setText(QCoreApplication::translate("MainWindow", "\345\255\246\345\217\267", nullptr));
         QTableWidgetItem *___qtablewidgetitem3 = tableWidget->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QCoreApplication::translate("MainWindow", "\345\256\277\350\210\215", nullptr));
+        ___qtablewidgetitem3->setText(QCoreApplication::translate("MainWindow", "\345\247\223\345\220\215", nullptr));
         QTableWidgetItem *___qtablewidgetitem4 = tableWidget->horizontalHeaderItem(4);
-        ___qtablewidgetitem4->setText(QCoreApplication::translate("MainWindow", "\346\240\270\351\205\270\346\227\245\346\234\237", nullptr));
+        ___qtablewidgetitem4->setText(QCoreApplication::translate("MainWindow", "\345\256\277\350\210\215", nullptr));
         QTableWidgetItem *___qtablewidgetitem5 = tableWidget->horizontalHeaderItem(5);
-        ___qtablewidgetitem5->setText(QCoreApplication::translate("MainWindow", "\347\224\265\350\257\235", nullptr));
+        ___qtablewidgetitem5->setText(QCoreApplication::translate("MainWindow", "\346\240\270\351\205\270\346\227\245\346\234\237", nullptr));
+        QTableWidgetItem *___qtablewidgetitem6 = tableWidget->horizontalHeaderItem(6);
+        ___qtablewidgetitem6->setText(QCoreApplication::translate("MainWindow", "\347\224\265\350\257\235", nullptr));
+
+        const bool __sortingEnabled = tableWidget->isSortingEnabled();
+        tableWidget->setSortingEnabled(false);
+        QTableWidgetItem *___qtablewidgetitem7 = tableWidget->item(0, 0);
+        ___qtablewidgetitem7->setText(QCoreApplication::translate("MainWindow", "1", nullptr));
+        QTableWidgetItem *___qtablewidgetitem8 = tableWidget->item(0, 1);
+        ___qtablewidgetitem8->setText(QCoreApplication::translate("MainWindow", "\350\256\241\347\256\227\346\234\272\345\255\246\351\231\242", nullptr));
+        QTableWidgetItem *___qtablewidgetitem9 = tableWidget->item(0, 2);
+        ___qtablewidgetitem9->setText(QCoreApplication::translate("MainWindow", "1911030", nullptr));
+        QTableWidgetItem *___qtablewidgetitem10 = tableWidget->item(0, 3);
+        ___qtablewidgetitem10->setText(QCoreApplication::translate("MainWindow", "\345\210\230\345\270\214\345\207\257", nullptr));
+        QTableWidgetItem *___qtablewidgetitem11 = tableWidget->item(0, 4);
+        ___qtablewidgetitem11->setText(QCoreApplication::translate("MainWindow", "\345\255\2469", nullptr));
+        QTableWidgetItem *___qtablewidgetitem12 = tableWidget->item(0, 5);
+        ___qtablewidgetitem12->setText(QCoreApplication::translate("MainWindow", "5-05", nullptr));
+        QTableWidgetItem *___qtablewidgetitem13 = tableWidget->item(0, 6);
+        ___qtablewidgetitem13->setText(QCoreApplication::translate("MainWindow", "18222270805", nullptr));
+        tableWidget->setSortingEnabled(__sortingEnabled);
+
     } // retranslateUi
 
 };

@@ -26,6 +26,13 @@ class stuSql : public QObject
 {
     Q_OBJECT
 public:
+    static stuSql *ptrstuSql;  //类内声明的静态指针要在类外初始化 stuSql *stuSql::ptrstuSql=nullptr;
+    static  stuSql *getinstance(){
+        if(nullptr ==ptrstuSql) {
+            ptrstuSql=new stuSql;
+        }
+        return ptrstuSql;
+    }
     explicit stuSql(QObject *parent = nullptr);
     //初始化
     void init();

@@ -21,7 +21,7 @@ log_in::~log_in()
 
 void log_in::on_pushButton_2_clicked()
 {
-    //练到数据库查找用户名和密码
+    //连到数据库查找用户名和密码
 
 
     //失败则提示

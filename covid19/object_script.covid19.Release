@@ -1,0 +1,10 @@
+release/dlg_addstudent.o
+release/log_in.o
+release/main.o
+release/mainwindow.o
+release/stusql.o
+release/qrc_res.o
+release/moc_dlg_addstudent.o
+release/moc_log_in.o
+release/moc_mainwindow.o
+release/moc_stusql.o

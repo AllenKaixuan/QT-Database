@@ -9,17 +9,20 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    dlg_addstudent.cpp \
     log_in.cpp \
     main.cpp \
     mainwindow.cpp \
     stusql.cpp
 
 HEADERS += \
+    dlg_addstudent.h \
     log_in.h \
     mainwindow.h \
     stusql.h
 
 FORMS += \
+    dlg_addstudent.ui \
     log_in.ui \
     mainwindow.ui
 

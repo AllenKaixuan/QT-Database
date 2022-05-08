@@ -36,8 +36,8 @@ public:
     QLabel *label_3;
     QWidget *widget;
     QGridLayout *gridLayout_3;
-    QPushButton *pushButton_2;
     QPushButton *pushButton;
+    QPushButton *pushButton_2;
 
     void setupUi(QWidget *log_in)
     {
@@ -71,6 +71,7 @@ public:
 
         name = new QLineEdit(widget_2);
         name->setObjectName(QString::fromUtf8("name"));
+        name->setStyleSheet(QString::fromUtf8("QlineEdit{border:2px }"));
         name->setMaxLength(8);
 
         gridLayout->addWidget(name, 0, 1, 1, 1);
@@ -126,21 +127,21 @@ public:
         widget->setMinimumSize(QSize(0, 30));
         gridLayout_3 = new QGridLayout(widget);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
-        pushButton_2 = new QPushButton(widget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setMinimumSize(QSize(0, 30));
-        QFont font2;
-        font2.setBold(true);
-        pushButton_2->setFont(font2);
-
-        gridLayout_3->addWidget(pushButton_2, 0, 0, 1, 1);
-
         pushButton = new QPushButton(widget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setMinimumSize(QSize(0, 30));
+        QFont font2;
+        font2.setBold(true);
         pushButton->setFont(font2);
 
         gridLayout_3->addWidget(pushButton, 0, 1, 1, 1);
+
+        pushButton_2 = new QPushButton(widget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setMinimumSize(QSize(0, 30));
+        pushButton_2->setFont(font2);
+
+        gridLayout_3->addWidget(pushButton_2, 0, 0, 1, 1);
 
 
         gridLayout_2->addWidget(widget, 2, 0, 1, 1);
@@ -159,8 +160,8 @@ public:
         label->setText(QCoreApplication::translate("log_in", "\345\257\206\347\240\201", nullptr));
         password->setPlaceholderText(QCoreApplication::translate("log_in", "\350\257\267\350\276\223\345\205\245\345\257\206\347\240\201", nullptr));
         label_3->setText(QCoreApplication::translate("log_in", "\346\240\270\351\205\270\344\277\241\346\201\257\347\256\241\347\220\206\347\263\273\347\273\237", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("log_in", "\347\231\273\345\275\225", nullptr));
         pushButton->setText(QCoreApplication::translate("log_in", "\351\200\200\345\207\272", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("log_in", "\347\231\273\345\275\225", nullptr));
     } // retranslateUi
 
 };

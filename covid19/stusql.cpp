@@ -6,11 +6,11 @@
 #include <QSqlQuery>
 #include <QString>
 #include<QtDebug>
-
+stuSql *stuSql::ptrstuSql=nullptr;
 stuSql::stuSql(QObject *parent)
     : QObject{parent}
 {
-    init();
+    //init();
 //    StuInfo s;
 //   s.name="lxk";
 //    for(int i=0;i<10;i++){
@@ -27,17 +27,17 @@ stuSql::stuSql(QObject *parent)
 //    s.id=5;
 //    s.studentid=1911030;
 //    UpdateStuInfo(s);
-    UserInfo info;
-    info.username="kaixi";
-    info.password="admin";
-    info.auth="admin";
-    AddUser(info);
-    AddUser(info);
-    auto l=getAllUser();
-    qDebug()<<isExit("kaixi");
-    info.password="root";
-    changeUserAut(info);
-    delUser("kaixi");
+//    UserInfo info;
+//    info.username="kaixi";
+//    info.password="admin";
+//    info.auth="admin";
+//    AddUser(info);
+//    AddUser(info);
+//    auto l=getAllUser();
+//    qDebug()<<isExit("kaixi");
+//    info.password="root";
+//    changeUserAut(info);
+//    delUser("kaixi");
 
 }
 
@@ -64,30 +64,30 @@ quint32 stuSql::getStuCnt()
 {
     QSqlQuery sql(m_db);
     sql.exec("select count(id) from student;");
-//    quint32 Count=0;
+   quint32 Count=0;
     while (sql.next()) {
-//       Count=sql.value(0).toUInt();  //some error
-        qDebug()<<sql.value(0).toUInt();
+     Count=sql.value(0).toUInt();  //some error
+//        qDebug()<<sql.value(0).toUInt();
     }
-//    return Count;
+   return Count;
 }
 
 QList<StuInfo> stuSql::getPageStu(quint32 page, quint32 uiCnt)
 {
     QList<StuInfo> l;
     QSqlQuery sql(m_db);
-    QString strsql=QString("select * from student order by id limit %1 offset %2").arg(uiCnt).arg(uiCnt*page);
+    QString strsql=QString("select * from student order by id limit %1 offset %2").arg(uiCnt).arg(page*uiCnt);
     sql.exec(strsql);
     StuInfo info;
     while (sql.next()) {
-       info.college=sql.value(0).toString();
-       info.studentid=sql.value(1).toUInt();
-       info.name=sql.value(2).toString();
-      info.domitory=sql.value(3).toString();
-      info.date=sql.value(4).toString();
-      info.phone=sql.value(5).toUInt();
-
-      l.push_back(info);
+        info.id=sql.value(0).toUInt();
+       info.college=sql.value(1).toString();
+       info.studentid=sql.value(2).toUInt();
+       info.name=sql.value(3).toString();
+      info.domitory=sql.value(4).toString();
+      info.date=sql.value(5).toString();
+      info.phone=sql.value(6).toUInt();
+    l.push_back(info);
     }
     return l;
 }

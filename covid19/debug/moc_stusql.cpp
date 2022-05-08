@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../stusql.h"
+#include "../../4.0/covid19/stusql.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
