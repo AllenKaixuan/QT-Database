@@ -2,37 +2,26 @@
 #define STUSQL_H
 
 #include <QObject>
+
 #include <QSqlDatabase>
 struct StuInfo{
-    QString college;
     int id;
+    QString college;
+    int studentid;
     QString name;
     QString domitory;
-    QString time;
-    int tele;
+    QString date;
+    int phone;
 
 };
 struct UserInfo{
+    int id;
     QString username;
     QString password;
-    QString aut;  //权限
+    QString auth;  //权限
 };
-struct TeacherInfo{
-    QString college;
-    int id;
-    QString name;
-    QString time;
-    int tele;
 
-};
-struct OthersInfo{
 
-    int id;
-    QString name;
-     QString time;
-    int tele;
-
-};
 class stuSql : public QObject
 {
     Q_OBJECT
@@ -52,18 +41,18 @@ public:
     //清空
     void clearStuTable();
     //修改信息
-    void  UpdateStuInfo(StuInfo info);
+    bool UpdateStuInfo(StuInfo info);
     //查询所有用户
     QList<UserInfo> getAllUser();
     //查询用户名是否存在
     bool isExit(QString str);
-    //修改用户权限
-    void changeUserAut(QString str);
+    //修改用户信息
+    bool changeUserAut(UserInfo info);
     //添加单个用户
-    void AddUser(UserInfo info);
+    bool AddUser(UserInfo info);
 
     //删除单个用户
-    void delUser(QString strUserName);
+    bool delUser(QString strUserName);
 
 signals:
 private:

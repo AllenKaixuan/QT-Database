@@ -26,23 +26,19 @@ MainWindow::MainWindow(QWidget *parent)
      l<<"学生管理";
      QTreeWidgetItem *p2=new QTreeWidgetItem(pf,l);
 
-    l.clear();
-    l<<"教职工管理";
-    QTreeWidgetItem *p1=new QTreeWidgetItem(pf,l);
 
 
 
-    l.clear();
-    l<<"第三方人员管理";
-    QTreeWidgetItem *p3=new QTreeWidgetItem(pf,l);
+
+
 
     l.clear();
     l<<"管理员管理";
     QTreeWidgetItem *p4=new QTreeWidgetItem(ui->treeWidget,l);
 
-    pf->addChild(p1);
+
     pf->addChild(p2);
-    pf->addChild(p3);
+
     pf->addChild(p4);
     ui->treeWidget->expandAll();
     ui->stackedWidget->setCurrentWidget(0);
