@@ -9,7 +9,7 @@
         "-I",
         "D:\\Programe\\QT\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-wrdNDy\\clang-uiheader-eLIqhl",
+        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-PYMALj\\clang-uiheader-GrwKOe",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -85,7 +85,7 @@
         "-I",
         "D:\\Programe\\QT\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-wrdNDy\\clang-uiheader-eLIqhl",
+        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-PYMALj\\clang-uiheader-GrwKOe",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -161,7 +161,7 @@
         "-I",
         "D:\\Programe\\QT\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-wrdNDy\\clang-uiheader-eLIqhl",
+        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-PYMALj\\clang-uiheader-GrwKOe",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -237,7 +237,7 @@
         "-I",
         "D:\\Programe\\QT\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-wrdNDy\\clang-uiheader-eLIqhl",
+        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-PYMALj\\clang-uiheader-GrwKOe",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -313,7 +313,7 @@
         "-I",
         "D:\\Programe\\QT\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-wrdNDy\\clang-uiheader-eLIqhl",
+        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-PYMALj\\clang-uiheader-GrwKOe",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -389,7 +389,7 @@
         "-I",
         "D:\\Programe\\QT\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-wrdNDy\\clang-uiheader-eLIqhl",
+        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-PYMALj\\clang-uiheader-GrwKOe",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -465,7 +465,7 @@
         "-I",
         "D:\\Programe\\QT\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-wrdNDy\\clang-uiheader-eLIqhl",
+        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-PYMALj\\clang-uiheader-GrwKOe",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -541,7 +541,7 @@
         "-I",
         "D:\\Programe\\QT\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-wrdNDy\\clang-uiheader-eLIqhl",
+        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-PYMALj\\clang-uiheader-GrwKOe",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -617,7 +617,7 @@
         "-I",
         "D:\\Programe\\QT\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-wrdNDy\\clang-uiheader-eLIqhl",
+        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-PYMALj\\clang-uiheader-GrwKOe",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -693,7 +693,7 @@
         "-I",
         "D:\\Programe\\QT\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-wrdNDy\\clang-uiheader-eLIqhl",
+        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-PYMALj\\clang-uiheader-GrwKOe",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -754,10 +754,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\lxk68\\experiment\\QT\\laptop_pro16\\covid19\\ui_dlg_addstudent.h"
+        "C:\\Users\\lxk68\\experiment\\QT\\laptop_pro16\\covid19\\ui_log_in.h"
     ],
     "directory": "C:/Users/lxk68/experiment/QT/laptop_pro16/covid19/.qtc_clangd",
-    "file": "C:/Users/lxk68/experiment/QT/laptop_pro16/covid19/ui_dlg_addstudent.h"
+    "file": "C:/Users/lxk68/experiment/QT/laptop_pro16/covid19/ui_log_in.h"
 },
 {
     "arguments": [
@@ -769,7 +769,7 @@
         "-I",
         "D:\\Programe\\QT\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-wrdNDy\\clang-uiheader-eLIqhl",
+        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-PYMALj\\clang-uiheader-GrwKOe",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -845,7 +845,7 @@
         "-I",
         "D:\\Programe\\QT\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-wrdNDy\\clang-uiheader-eLIqhl",
+        "C:\\Users\\lxk68\\AppData\\Local\\Temp\\QtCreator-PYMALj\\clang-uiheader-GrwKOe",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -906,9 +906,9 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\lxk68\\experiment\\QT\\laptop_pro16\\covid19\\ui_log_in.h"
+        "C:\\Users\\lxk68\\experiment\\QT\\laptop_pro16\\covid19\\ui_dlg_addstudent.h"
     ],
     "directory": "C:/Users/lxk68/experiment/QT/laptop_pro16/covid19/.qtc_clangd",
-    "file": "C:/Users/lxk68/experiment/QT/laptop_pro16/covid19/ui_log_in.h"
+    "file": "C:/Users/lxk68/experiment/QT/laptop_pro16/covid19/ui_dlg_addstudent.h"
 }
 ]
